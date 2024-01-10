@@ -11,7 +11,7 @@ public class Romb {
         this.a = a;
     }
 
-public double calcPerimeter() {
+public double calcPerimeter(double side) {
     if (side <=0) {
         throw new InputMismatchException();
     }
@@ -26,7 +26,4 @@ public double calcArea(double side, double a) {
     return Math.pow(side, 2) * Math.sin(aRad);
 }
 
-public double CalcPerimeter(int i) {
-    return 0;
-}
 }
