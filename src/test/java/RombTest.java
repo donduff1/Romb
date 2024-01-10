@@ -1,6 +1,9 @@
 
 
 import lan.zold.Romb;
+
+import java.util.InputMismatchException;
+
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -25,5 +28,12 @@ public class RombTest {
         double expected = 516.2;
         Assert.assertEquals(actual, expected, 1);
     }
-    
+    @Test(expectedExceptions = InputMismatchException.class)
+    public void testcalcPerimeter_Zero_Side() {
+        this.romb.calcPerimeter(0);
+    }
+        @Test(expectedExceptions = InputMismatchException.class)
+    public void testcalcArea_Zero_Angle() {
+        this.romb.calcArea(30, 0);
+}
 }
